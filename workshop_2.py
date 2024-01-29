@@ -121,7 +121,7 @@ table = dbc.Table.from_dataframe(subset_tab, striped=True, bordered=True, hover=
 # In[168]:
 
 
-app = Dash(external_stylesheets = [dbc.themes.BOOTSTRAP, dbc_css])
+app = Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP, dbc_css])
 
 text = """Data is extracted from the [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/)."""
 
@@ -142,8 +142,8 @@ app.layout = dbc.Container(
     ],
     className = 'dbc'
 )
-
-app.run()
+if __name__ == '__main__':
+    app.run(debug = True)
 
 
 # In[ ]:
