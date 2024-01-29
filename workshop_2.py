@@ -122,6 +122,7 @@ table = dbc.Table.from_dataframe(subset_tab, striped=True, bordered=True, hover=
 
 
 app = Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP, dbc_css])
+server = app.server
 
 text = """Data is extracted from the [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/)."""
 
